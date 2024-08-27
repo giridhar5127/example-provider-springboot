@@ -18,10 +18,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @Provider("pactflow-example-provider-springboot")
-@PactBroker(url = "https://tesco1.pactflow.io", providerBranch = "master",
+@PactBroker(url = "${PACT_BROKER_BASE_URL}", providerBranch = "master",
         enablePendingPacts = "true",
         includeWipPactsSince = "2024-01-01",
-        authentication = @PactBrokerAuth(token = "c4de4c6WGXM94qmRlm01Ww"))
+        authentication = @PactBrokerAuth(token = "${PACT_BROKER_TOKEN}"))
 class ProductsPactTest {
 
   @Autowired
