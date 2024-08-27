@@ -16,15 +16,17 @@ class Product {
   private String version;
   private String description;
   private String price;
+  private String fiel;
 
   Product() {}
 
-  Product(Long id, String name, String type, String version, String description, String price) {
+  Product(Long id, String name, String type, String version, String description, String price, String fiel) {
     this.id = id;
     this.name = name;
     this.type = type;
     this.version = version;
     this.description = description;
     this.price = price;
+    this.fiel = fiel;
   }
 }
