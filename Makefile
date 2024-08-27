@@ -25,7 +25,7 @@ ci: test $(DEPLOY_TARGET)
 # Use this for quick feedback when playing around with your workflows.
 fake_ci: .env
 	CI=true \
-	GIT_COMMIT=`git rev-parse --short HEAD`+`date +%s` \
+	GIT_COMMIT=`git rev-parse --short HEAD` \
 	GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` \
 	PACT_BROKER_PUBLISH_VERIFICATION_RESULTS=true \
 	make ci
@@ -35,7 +35,7 @@ ci_webhook: .env
 
 fake_ci_webhook:
 	CI=true \
-	GIT_COMMIT=`git rev-parse --short HEAD`+`date +%s` \
+	GIT_COMMIT=`git rev-parse --short HEAD` \
 	GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` \
 	PACT_BROKER_PUBLISH_VERIFICATION_RESULTS=true \
 	make ci_webhook
