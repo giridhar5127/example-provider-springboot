@@ -18,7 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @Provider("pactflow-example-provider-springboot")
-@PactBroker(url = "https://tesco1.pactflow.io", providerBranch = "main",
+@PactBroker(url = "https://tesco1.pactflow.io", providerBranch = "master",
         enablePendingPacts = "true",
         includeWipPactsSince = "2020-01-01",
         authentication = @PactBrokerAuth(token = "c4de4c6WGXM94qmRlm01Ww"))
