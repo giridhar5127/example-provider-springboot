@@ -24,7 +24,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
         authentication = @PactBrokerAuth(token = "c4de4c6WGXM94qmRlm01Ww"))
 class ProductsPactTest {
 
-
   @Autowired
   ProductRepository repository;
 
