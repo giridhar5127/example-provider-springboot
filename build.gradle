@@ -38,7 +38,7 @@ test {
 	systemProperty("pact.provider.version", System.getenv("GIT_COMMIT") == null ? "" : System.getenv("GIT_COMMIT"))
 	// systemProperty("pact.provider.tag", System.getenv("GIT_BRANCH") == null ? "" : System.getenv("GIT_BRANCH"))
 	systemProperty("pact.provider.branch", System.getenv("GIT_BRANCH") == null ? "" : System.getenv("GIT_BRANCH"))
-	systemProperty("pactbroker.consumerversionselectors.rawjson", "[{\"mainBranch\":true, \"deployed\":true}]")
+	systemProperty("pactbroker.consumerversionselectors.rawjson", "[{\"mainBranch\":true, \"deployedOrReleased\":true}]")
 	systemProperty 'pact.verifier.publishResults', 'true'
 	systemProperty 'pact.publishVerificationResults', 'true'
 	systemProperty 'pactbroker.publishVerificationResults', 'true'
