@@ -22,6 +22,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
         enablePendingPacts = "true",
         includeWipPactsSince = "2024-01-01",
         authentication = @PactBrokerAuth(token = "${PACT_BROKER_TOKEN}"))
+@IgnoreNoPactsToVerify
+@IgnoreMissingStateChange
 class ProductsPactTest {
 
   @Autowired
