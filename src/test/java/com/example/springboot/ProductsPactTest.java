@@ -59,11 +59,12 @@ class ProductsPactTest {
     repository.save(new Product(10L, "test", "product description", "1.0.0", "desc", "1.0", "f"));
   }
 
-  @au.com.dius.pact.provider.junitsupport.loader.PactBrokerConsumerVersionSelectors
+  @PactBrokerConsumerVersionSelectors
   public static SelectorBuilder consumerVersionSelectors() {
     // Select Pacts for consumers deployed to production with branch 'FEAT-123' 
     return new SelectorBuilder()
-            .mainBranch();
+            .mainBranch()
+            .deployedOrReleased();
   }
 
 }
