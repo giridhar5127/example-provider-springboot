@@ -63,8 +63,7 @@ class ProductsPactTest {
   public static SelectorBuilder consumerVersionSelectors() {
     // Select Pacts for consumers deployed to production with branch 'FEAT-123' 
     return new SelectorBuilder()
-            .mainBranch()
-            .deployedOrReleased();
+            .mainBranch();
   }
 
 }
