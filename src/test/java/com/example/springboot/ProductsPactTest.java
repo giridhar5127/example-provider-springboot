@@ -20,7 +20,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @Provider("pactflow-example-provider-springboot")
 @PactBroker(url = "${PACT_BROKER_BASE_URL}", providerBranch = "master",
         enablePendingPacts = "true",
-        includeWipPactsSince = "2024-01-01",
+        includeWipPactsSince = "2024-05-07",
         authentication = @PactBrokerAuth(token = "${PACT_BROKER_TOKEN}"))
 @IgnoreNoPactsToVerify
 @IgnoreMissingStateChange
